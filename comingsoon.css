@@ -1,0 +1,91 @@
+@import url("https://use.typekit.net/tec1vmi.css");
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "freight-sans-pro", sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "benton-modern-display", serif;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a {
+  background: white;
+  color: #000A24;
+  padding: 4px 10px;
+  margin: 1rem auto;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  background: #33DDD9;
+  color: white;
+}
+
+#comingsoon-container {
+  background: #000A24;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+#comingsoon-logo {
+  width: 50%;
+  margin: auto;
+}
+
+#comingsoon-logo img {
+  width: 100%;
+  margin: auto;
+}
+
+#comingsoon-content {
+
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 3rem;
+  }
+  #comingsoon-logo {
+    width: 20%;
+    margin: auto;s
+  }
+
+  #comingsoon-logo img {
+    width: 100%;
+    margin: auto;
+  }
+
+  #comingsoon-content {
+    align-self: flex-end;
+    padding-right: 40px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+}
+
+@media (min-width: 1440px) {
+}
+

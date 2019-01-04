@@ -31,5 +31,6 @@
     "popper.js": "^1.14.5",
     "sass-loader": "^7.1.0",
     "uglifyjs-webpack-plugin": "^2.0.1"
-  }
+  },
+  "repository": "git@github.com:Camvillard/samanthagallay_V1.git"
 }
