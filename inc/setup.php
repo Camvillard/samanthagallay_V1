@@ -7,7 +7,7 @@
 
 if (!isset($content_width))
 {
-    $content_width = 900;
+    $content_width = 1080;
 }
 
 if (function_exists('add_theme_support'))
