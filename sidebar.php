@@ -1,6 +1,8 @@
 <!-- sidebar -->
 <aside class="sidebar" role="complementary">
 
+  <h3>hello from</h3>
+
 	<?php get_template_part('searchform'); ?>
 
 	<div class="sidebar-widget">
