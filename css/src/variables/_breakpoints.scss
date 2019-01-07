@@ -1,25 +1,30 @@
 /* ------ VARIABLES : BREAKPOINTS ------ */
 
+$xsm-screen: 576px;
+$sm-screen: 768px;
+$md-screen: 992px;
+$lg-screen: 1200px;
+$hg-screen: 1440px;
 
-@media only screen and (min-width:320px) {
 
-}
-@media only screen and (min-width:480px) {
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
 
-}
-@media only screen and (min-width:768px) {
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
 
-}
-@media only screen and (min-width:1024px) {
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
 
-}
-@media only screen and (min-width:1140px) {
+@media only screend and (min-width: $lg-screen),
+       only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-resolution:144dpi) {
+} // end of lg-screen - 1200px
 
-}
-@media only screen and (min-width:1280px) {
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
 
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-     only screen and (min-resolution:144dpi) {
 
-}
+
+
+
