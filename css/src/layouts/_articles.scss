@@ -1,0 +1,14 @@
+/* ------ LAYOUTS : ARTICLES ------ */
+
+
+article {
+  a {
+    background: $light-aqua;
+    color: $bright-blue;
+  }
+
+  a:hover {
+    color: white;
+    background: $aqua;
+  }
+}

@@ -10,16 +10,9 @@
   font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
-/* html element 62.5% font-size for REM use */
-html {
-  font-size:100%;
-}
-body {
-  // background: red;
-  font-family: $body-font;
-  color: $medium-gray;
-}
+
 /* clear */
+// wordpress stuff
 .clear:before,
 .clear:after {
     content:' ';
@@ -32,25 +25,146 @@ body {
 .clear {
     *zoom:1;
 }
-img {
-  max-width:100%;
-  vertical-align:bottom;
+
+//main elements
+/* html element 62.5% font-size for REM use */
+html {
+  font-size: 62.5%;
 }
+
+body {
+  font-family: $body-font;
+  color: $medium-gray;
+  font-size: 62.5%;
+}
+
+article {
+  width: 80vw;
+  max-width: 1080px;
+  margin: auto;
+}
+
+// typography
+p {
+  font-size: 1.4rem;
+}
+
 a {
-  color:#444;
-  text-decoration:none;
+  color: $dark-blue;
+  text-decoration: none;
+  // background: $light-aqua;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: all 0.3s ease-out;
 }
+
 a:hover {
-  color:#444;
+  // color: white;
+  // background: $aqua;
+  text-decoration: none;
 }
+
 a:focus {
   outline:0;
 }
+
 a:hover,
 a:active {
   outline:0;
 }
+
 input:focus {
   outline:0;
   border:1px solid #04A4CC;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+}
+
+h1, h2, h3 {
+  color: $bright-blue;
+  font-weight: $font-weight-bold;
+  margin: 2.8rem auto 0.6rem;
+}
+
+h2, h3 {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+// graphical stuff
+img {
+  max-width:100%;
+  vertical-align:bottom;
+}
+
+
+
+@media only screen and (min-width:1140px) {
+
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  h1, h2, h3 {
+    margin: 3rem auto 1.2rem;
+  }
+
+  h1 {
+    font-size: 6.4rem;
+  }
+
+  h2 {
+    font-size: 4.8rem;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+  }
+
+  h5 {
+    font-size: 2.8rem;
+  }
+
+  h6 {
+    font-size: 2.8rem;
+  }
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+     only screen and (min-resolution:144dpi) {
+
+}
+
