@@ -2,12 +2,15 @@
 
 
 article {
-  a {
+  .content a {
     background: $light-aqua;
     color: $bright-blue;
+    font-family: $accent-font;
+    font-style: italic;
+    font-size: 1.9rem;
   }
 
-  a:hover {
+  .content a:hover {
     color: white;
     background: $aqua;
   }

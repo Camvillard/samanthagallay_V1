@@ -50,6 +50,7 @@ p {
 }
 
 a {
+  font-size: 1.5rem;
   color: $dark-blue;
   text-decoration: none;
   // background: $light-aqua;
@@ -106,14 +107,21 @@ h3 {
 
 h4 {
   font-size: 2.2rem;
+  font-family: $body-font;
+  text-transform: uppercase;
+  color: $bright-blue;
 }
 
 h5 {
   font-size: 1.8rem;
+  font-family: $body-font;
+  text-transform: uppercase;
+  color: $aqua;
 }
 
 h6 {
   font-size: 1.8rem;
+  color: $aqua;
 }
 
 // graphical stuff
@@ -123,12 +131,24 @@ img {
 }
 
 
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
 
-@media only screen and (min-width:1140px) {
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
 
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
 
+@media only screend and (min-width: $lg-screen),
+       only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-resolution:144dpi) {
   p {
     font-size: 1.8rem;
+  }
+
+  a {
+    font-size: 1.9rem;
   }
 
   h1, h2, h3 {
@@ -158,13 +178,10 @@ img {
   h6 {
     font-size: 2.8rem;
   }
+} // end of lg-screen - 1200px
 
-}
-@media only screen and (min-width:1280px) {
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
 
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-     only screen and (min-resolution:144dpi) {
 
-}
 

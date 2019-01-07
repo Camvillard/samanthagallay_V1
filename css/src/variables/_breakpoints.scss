@@ -1,6 +1,6 @@
 /* ------ VARIABLES : BREAKPOINTS ------ */
 
-$xsm-device: 576px;
+$xsm-screen: 576px;
 $sm-screen: 768px;
 $md-screen: 992px;
 $lg-screen: 1200px;
@@ -16,9 +16,9 @@ $hg-screen: 1440px;
 @media (min-width: $md-screen) {
 } // end of md-screen - 992px
 
-@media (min-width: $lg-screen),
-      only screen and (-webkit-min-device-pixel-ratio:1.5),
-      only screen and (min-resolution:144dpi) {
+@media only screend and (min-width: $lg-screen),
+       only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-resolution:144dpi) {
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
