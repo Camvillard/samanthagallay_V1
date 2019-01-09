@@ -1,11 +1,8 @@
 /* ------ GENERAL : LOGGED IN SESSION ------ */
 
 // hide the admin bar
-#wpadminbar {
-  // display: none;
-}
 
-.logged-in #wpadminbar {
-  // display: block;
+.logged-in header {
+  margin-top: 32px;
 }
 
