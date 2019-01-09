@@ -1,0 +1,11 @@
+/* ------ GENERAL : LOGGED IN SESSION ------ */
+
+// hide the admin bar
+#wpadminbar {
+  // display: none;
+}
+
+.logged-in #wpadminbar {
+  // display: block;
+}
+

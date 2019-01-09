@@ -1,17 +1,27 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after
+ *
+ * @package cdltbisou
+ */
+?>
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. fabriqué avec amour par<i class="far fa-heart"></i> <a href="https://camillevillard.com" title="camillevillard">camille villard</a>.
-				</p>
-				<!-- /copyright -->
+      <!-- footer -->
+      <footer class="footer" role="contentinfo">
 
-			</footer>
-			<!-- /footer -->
+      	<!-- copyright -->
+      	<p class="copyright">
+      		&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. fabriqué avec amour par<i class="far fa-heart"></i> <a href="https://camillevillard.com" title="camillevillard">camille villard</a>.
+      	</p>
+      	<!-- /copyright -->
 
-		</div>
-		<!-- /wrapper -->
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /wrapper -->
 
 		<?php wp_footer(); ?>
 
