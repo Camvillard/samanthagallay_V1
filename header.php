@@ -43,8 +43,15 @@
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
+					<nav id="navbar" class="nav" role="navigation">
+            <!-- search -->
+            <form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
+              <input class="search-input" type="search" name="s" placeholder="f002">
+            </form>
+            <!-- /search -->
+            <!-- navigation -->
+            <?php html5blank_nav(); ?>
+            <!-- /navigation -->
 					</nav>
 					<!-- /nav -->
 
