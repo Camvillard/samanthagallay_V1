@@ -4,25 +4,29 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php the_title(); ?></h1>
+      <header class="entry-header">
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php the_title( '<h1 class="entry-title"><span>', '</span></h1>' ); ?>
 
-    <?php get_template_part('loop-templates/content', 'page') ?>
+      </header><!-- .entry-header -->
 
-		<?php endwhile; ?>
+  		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<?php else: ?>
+        <?php get_template_part('loop-templates/content', 'page') ?>
 
-			<!-- article -->
-			<article>
+  		<?php endwhile; ?>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+  		<?php else: ?>
 
-			</article>
-			<!-- /article -->
+  			<!-- article -->
+  			<article>
 
-		<?php endif; ?>
+  				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+  			</article>
+  			<!-- /article -->
+
+		  <?php endif; ?>
 
 		</section>
 		<!-- /section -->

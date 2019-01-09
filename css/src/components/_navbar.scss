@@ -1,5 +1,11 @@
 // /* ------ COMPONENTS : NAVBAR ------ */
 
+.nav {
+  ul {
+    font-family: $body-font;
+    text-transform: uppercase;
+  }
+}
 
 
 @media (min-width: $xsm-screen) {
@@ -9,9 +15,9 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #navbar {
+  .nav {
 
-    margin-top: 30px;
+    // margin-top: 30px;
 
     ul {
       list-style: none;
