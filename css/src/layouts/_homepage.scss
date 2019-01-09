@@ -1,0 +1,46 @@
+/* ------ LAYOUTS : HOMEPAGE ------ */
+
+#homepage-header {
+  // background: red;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#homepage-navbar {
+  padding-right: 2vw;
+
+  li.item-nouvelles {
+    font-family: $accent-font;
+    text-transform: lowercase;
+    font-style: italic;
+  }
+}
+
+
+
+
+
+
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media only screend and (min-width: $lg-screen),
+       only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-resolution:144dpi) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
+
+

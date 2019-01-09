@@ -1,0 +1,30 @@
+/* ------ COMPONENTS : HEADER ------ */
+
+
+
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  #main-header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 180px;
+  }
+
+
+} // end of md-screen - 992px
+
+@media only screend and (min-width: $lg-screen),
+       only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-resolution:144dpi) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

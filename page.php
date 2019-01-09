@@ -1,40 +1,32 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<main role="main" id="main">
 		<!-- section -->
 		<section>
 
-			<h1><?php the_title(); ?></h1>
+      <header class="entry-header">
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php the_title( '<h1 class="entry-title"><span>', '</span></h1>' ); ?>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      </header><!-- .entry-header -->
 
-				<?php the_content(); ?>
+  		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+        <?php get_template_part('loop-templates/content', 'page') ?>
 
-				<br class="clear">
+  		<?php endwhile; ?>
 
-				<?php edit_post_link(); ?>
+  		<?php else: ?>
 
-			</article>
-			<!-- /article -->
+  			<!-- article -->
+  			<article>
 
-		<?php endwhile; ?>
+  				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-		<?php else: ?>
+  			</article>
+  			<!-- /article -->
 
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
+		  <?php endif; ?>
 
 		</section>
 		<!-- /section -->

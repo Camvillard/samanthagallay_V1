@@ -4,14 +4,11 @@ add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Si
 
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 
+// add_filter('show_admin_bar', '__return_false');
 
-
-// Remove Admin bar
-add_filter('show_admin_bar', 'remove_admin_bar');
-
-function remove_admin_bar()
-{
-    return true;
+// // Remove Admin bar if user is not an admin
+if ( ! current_user_can( 'manage_options' ) ) {
+    show_admin_bar( false );
 }
 
 // add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1); // Remove Navigation <li> injected classes (Commented out by default)
