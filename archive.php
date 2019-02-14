@@ -56,6 +56,7 @@
   	</main>
 
     <?php get_sidebar(); ?>
+
     <?php get_template_part('components/footer/footer', 'general'); ?>
 
     <?php wp_footer(); ?>
