@@ -1,3 +1,13 @@
+<?php
+/**
+*
+* template for a regular page
+*
+* @package cdltbisou
+*
+*/
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
   <head>
@@ -29,8 +39,8 @@
 
   <body <?php body_class(); ?>>
 
-    <?php get_template_part('components/header/header', 'general') ?>
-    <?php get_template_part('loop-templates/content', 'page') ?>
+    <?php get_template_part('components/header/header', 'general'); ?>
+    <?php get_template_part('loop-templates/content', 'page'); ?>
     <?php get_template_part('components/footer/footer', 'general'); ?>
 
     <?php wp_footer(); ?>
@@ -46,4 +56,4 @@
     </script>
 
   </body>
-
+</html>

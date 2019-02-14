@@ -1,77 +1,133 @@
-<?php get_header(); ?>
+<?php
+/**
+*
+* template for author page
+*
+* @package cdltbisou
+*
+*/
+?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
 
-		<?php if (have_posts()): the_post(); ?>
+  <head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-			<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-		<?php if ( get_the_author_meta('description')) : ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-		<?php echo get_avatar(get_the_author_meta('user_email')); ?>
+    <?php wp_head(); ?>
+    <script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: '<?php echo get_template_directory_uri(); ?>',
+            tests: {}
+        });
+        </script>
 
-			<h2><?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?></h2>
+  </head>
 
-			<?php echo wpautop( get_the_author_meta('description') ); ?>
+  <body <?php body_class(); ?>>
 
-		<?php endif; ?>
+    <?php get_template_part('components/header/header', 'general'); ?>
 
-		<?php rewind_posts(); while (have_posts()) : the_post(); ?>
+    <main role="main">
+      <!-- section -->
+      <section>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <?php if (have_posts()): the_post(); ?>
 
-				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-					</a>
-				<?php endif; ?>
-				<!-- /post thumbnail -->
+        <h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
 
-				<!-- post title -->
-				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</h2>
-				<!-- /Post title -->
+      <?php if ( get_the_author_meta('description')) : ?>
 
-				<!-- post details -->
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-				<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-				<!-- /post details -->
+      <?php echo get_avatar(get_the_author_meta('user_email')); ?>
 
-				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+        <h2><?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?></h2>
 
-				<br class="clear">
+        <?php echo wpautop( get_the_author_meta('description') ); ?>
 
-				<?php edit_post_link(); ?>
+      <?php endif; ?>
 
-			</article>
-			<!-- /article -->
+      <?php rewind_posts(); while (have_posts()) : the_post(); ?>
 
-		<?php endwhile; ?>
+        <!-- article -->
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php else: ?>
+          <!-- post thumbnail -->
+          <?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+              <?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+            </a>
+          <?php endif; ?>
+          <!-- /post thumbnail -->
 
-			<!-- article -->
-			<article>
+          <!-- post title -->
+          <h2>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+          </h2>
+          <!-- /Post title -->
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+          <!-- post details -->
+          <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+          <span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+          <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+          <!-- /post details -->
 
-			</article>
-			<!-- /article -->
+          <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 
-		<?php endif; ?>
+          <br class="clear">
 
-			<?php get_template_part('components/content/pagination'); ?>
+          <?php edit_post_link(); ?>
 
-		</section>
-		<!-- /section -->
-	</main>
+        </article>
+        <!-- /article -->
 
-<?php get_sidebar(); ?>
+      <?php endwhile; ?>
 
-<?php get_footer(); ?>
+      <?php else: ?>
+
+        <!-- article -->
+        <article>
+
+          <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+        </article>
+        <!-- /article -->
+
+      <?php endif; ?>
+
+        <?php get_template_part('components/content/pagination'); ?>
+
+      </section>
+      <!-- /section -->
+    </main>
+
+    <?php get_sidebar(); ?>
+
+    <?php get_template_part('components/footer/footer', 'general'); ?>
+
+    <?php wp_footer(); ?>
+
+    <!-- analytics -->
+    <script>
+    (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
+    ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

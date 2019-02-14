@@ -10,13 +10,13 @@
 
 @media (min-width: $md-screen) {
 
-  header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 120px;
-  }
+  // header {
+  //   display: flex;
+  //   position: fixed;
+  //   top: 0;
+  //   width: 100vw;
+  //   height: 120px;
+  // }
 
   #main-header{
     justify-content: space-between;
