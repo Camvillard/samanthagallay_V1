@@ -9,19 +9,29 @@
 */
 ?>
 
+<!-- get the header without the logo -->
 <?php get_template_part('components/header/header', 'homepage'); ?>
 
-  <main role="main" id="main">
+
+  <main role="main" id="frontpage-main">
     <!-- section -->
-    <section>
+    <section id="frontpage-section">
 
-      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+      <div id="frontpage-logo">
+        <img src="<?php echo get_template_directory_uri() . '/img/logo_blanc.svg'; ?>" />
+      </div>
 
-        <?php get_template_part('loop-templates/content', 'page') ?>
+      <div id="frontpage-content">
+        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-      <?php endwhile; ?>
+          <?php the_title( '<h1 class="entry-title"><span>', '</span></h1>' ); ?>
 
-      <?php endif; ?>
+          <?php get_template_part('loop-templates/content', 'page') ?>
+
+        <?php endwhile; ?>
+
+        <?php endif; ?>
+      </div>
 
     </section>
     <!-- /section -->

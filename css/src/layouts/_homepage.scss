@@ -1,25 +1,31 @@
 /* ------ LAYOUTS : HOMEPAGE ------ */
 
-#homepage-header {
-  // background: red;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
+
+#frontpage-main {
+  width: 80vw;
+  margin: auto;
 }
 
+#frontpage-section{
+  display: flex;
+  flex-direction: column;
+}
 
-#homepage-navbar {
-  padding-right: 2vw;
-
-  li.item-nouvelles {
-    font-family: $accent-font;
-    text-transform: lowercase;
-    font-style: italic;
+#frontpage-logo {
+  width: 80%;
+    margin: auto;
+  img {
+    width: 100%;
   }
 }
+
+#frontpage-content {
+
+  & > * {
+    width: 100%;
+  }
+}
+
 
 
 
@@ -33,6 +39,49 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+
+  #homepage-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #homepage-navbar {
+    padding-right: 2vw;
+
+    li.item-nouvelles {
+      font-family: $accent-font;
+      text-transform: lowercase;
+      font-style: italic;
+    }
+  }
+
+  #frontpage-section{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #frontpage-logo {
+    flex: 0 0 30%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  #frontpage-content {
+    flex: 0 0 60%;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+
 } // end of md-screen - 992px
 
 @media only screend and (min-width: $lg-screen),
