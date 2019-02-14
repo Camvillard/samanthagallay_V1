@@ -21,6 +21,11 @@
 
 #frontpage-content {
 
+  .entry-title {
+    border-bottom: 3px solid $dark-blue;
+    padding: $spacing-sm 0;
+  }
+
   & > * {
     width: 100%;
   }
