@@ -11,8 +11,8 @@ if (function_exists('register_sidebar'))
     register_sidebar(array(
         'name' => __('Front Page widget area', 'cdltbisou'),
         'description' => __('this is where the main homepage content goes', 'cdltbisou'),
-        'id' => 'widget-frontpage-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'id' => 'widget-content-frontpage',
+        'before_widget' => '<div id="widget-content-frontpage" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
@@ -20,10 +20,10 @@ if (function_exists('register_sidebar'))
 
     // Define Sidebar Widget Area 2
     register_sidebar(array(
-        'name' => __('Widget Area 2', 'cdltbisou'),
-        'description' => __('Description for this widget-area...', 'cdltbisou'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'name' => __('Front page footer', 'cdltbisou'),
+        'description' => __('This is where the info for the homepage footer goes', 'cdltbisou'),
+        'id' => 'widget-footer-frontpage',
+        'before_widget' => '<div id="widget-footer-frontpage" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'

@@ -45,25 +45,6 @@
 
 @media (min-width: $md-screen) {
 
-  #homepage-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  #homepage-navbar {
-    padding-right: 2vw;
-
-    li.item-nouvelles {
-      font-family: $accent-font;
-      text-transform: lowercase;
-      font-style: italic;
-    }
-  }
-
   #frontpage-section{
     flex-direction: row;
     justify-content: space-around;

@@ -1,18 +1,18 @@
 /* ------ WORDPRESS CORE ------ */
 
 ::selection {
-  background:#04A4CC;
-  color:#FFF;
+  background:$light-aqua;
+  color: $dark-blue;
   text-shadow:none;
 }
 ::-webkit-selection {
-  background:#04A4CC;
-  color:#FFF;
+  background:$light-aqua;
+  color: $dark-blue;
   text-shadow:none;
 }
 ::-moz-selection {
-  background:#04A4CC;
-  color:#FFF;
+  background:$light-aqua;
+  color: $dark-blue;
   text-shadow:none;
 }
 

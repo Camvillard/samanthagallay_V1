@@ -9,13 +9,32 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #main-header{
+
+  header {
     display: flex;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 180px;
+    height: 120px;
+  }
+
+  #main-header{
+    justify-content: space-between;
+    margin-bottom: 180px;
+  }
+
+  #homepage-header {
+    justify-content: flex-end;
+  }
+
+  #homepage-navbar {
+    padding-right: 2vw;
+
+    li.item-nouvelles {
+      font-family: $accent-font;
+      text-transform: lowercase;
+      font-style: italic;
+    }
   }
 
 
