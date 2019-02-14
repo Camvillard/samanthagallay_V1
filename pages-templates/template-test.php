@@ -1,9 +1,8 @@
 <?php
 /**
- * Template Name: Empty Page Template
+ * Template Name: Blocks page
  *
- * Template for displaying a page just with the header and footer area and a "naked" content area in between.
- * Good for landingpages and other types of pages where you want to add a lot of custom markup.
+ * This is just a template to keep track of all the block for the WP editor
  *
  * @package cdltbisou
  */
@@ -41,9 +40,9 @@
   <body <?php body_class(); ?>>
 
     <?php get_template_part('components/header/header', 'general'); ?>
-    <?php while ( have_posts() ) : the_post();
-  get_template_part( 'loop-templates/content', 'blank' );
-endwhile; ?>
+
+    <?php get_template_part('partials/bloc'); ?>
+
     <?php get_template_part('components/footer/footer', 'general'); ?>
 
     <?php wp_footer(); ?>
