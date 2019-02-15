@@ -1,5 +1,5 @@
 
-  <main role="main" id="main">
+  <main role="main" id="page-main">
     <!-- section -->
     <section>
 

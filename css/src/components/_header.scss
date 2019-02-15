@@ -1,6 +1,9 @@
 /* ------ COMPONENTS : HEADER ------ */
 
-
+// all headers
+header.header {
+  border: 3px solid yellow;
+}
 
 @media (min-width: $xsm-screen) {
 } // end of xsm-screen - 576px
@@ -10,17 +13,17 @@
 
 @media (min-width: $md-screen) {
 
-  // header {
-  //   display: flex;
-  //   position: fixed;
-  //   top: 0;
-  //   width: 100vw;
-  //   height: 120px;
-  // }
+  header.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 120px;
+  }
 
   #main-header{
     justify-content: space-between;
-    margin-bottom: 180px;
+    margin-bottom: 20px;
   }
 
   #homepage-header {

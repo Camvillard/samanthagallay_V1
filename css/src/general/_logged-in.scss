@@ -1,8 +1,23 @@
 /* ------ GENERAL : LOGGED IN SESSION ------ */
 
-// hide the admin bar
 
-.logged-in header {
-  margin-top: 32px;
-}
 
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media only screend and (min-width: $lg-screen) {
+
+  // add some margin to adapt when logged in
+  .logged-in header.header {
+    margin-top: 32px;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

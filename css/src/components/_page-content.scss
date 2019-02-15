@@ -1,9 +1,10 @@
 /* ------ COMPONENTS : PAGE CONTENT ------ */
 
-main {
-  // border: 3px solid blue;
-  margin-top: 180px;
+#page-main {
+  border: 3px solid blue;
+  margin-top: $page-content-margin-top-md;
 }
+
 
 
 @media (min-width: $xsm-screen) {
@@ -18,6 +19,9 @@ main {
 @media only screend and (min-width: $lg-screen),
        only screen and (-webkit-min-device-pixel-ratio:1.5),
        only screen and (min-resolution:144dpi) {
+  #page-main {
+    margin-top: $page-content-margin-top-lg;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
