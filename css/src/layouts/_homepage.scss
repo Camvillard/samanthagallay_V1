@@ -70,9 +70,7 @@
 
 } // end of md-screen - 992px
 
-@media only screend and (min-width: $lg-screen),
-       only screen and (-webkit-min-device-pixel-ratio:1.5),
-       only screen and (min-resolution:144dpi) {
+@media only screen and (min-width: $lg-screen) {
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

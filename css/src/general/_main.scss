@@ -9,6 +9,7 @@
   -webkit-font-smoothing:antialiased;
   font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
+  overflow-wrap: break-word;
 }
 
 /* clear */
@@ -45,7 +46,7 @@ article {
 }
 
 main {
-  width: 80vw;
+  width: 90vw;
   margin: auto;
 }
 
@@ -58,7 +59,6 @@ a {
   font-size: 1.5rem;
   color: $dark-blue;
   text-decoration: none;
-  // background: $light-aqua;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   transition: all 0.3s ease-out;
@@ -95,7 +95,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 3.6rem;
 }
 
 h2 {
@@ -136,14 +136,22 @@ img {
 } // end of xsm-screen - 576px
 
 @media (min-width: $sm-screen) {
+  main {
+    width: 80vw;
+    margin: auto;
+  }
+
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
 } // end of md-screen - 992px
 
-@media only screend and (min-width: $lg-screen),
-       only screen and (-webkit-min-device-pixel-ratio:1.5),
-       only screen and (min-resolution:144dpi) {
+@media only screen and (min-width: $lg-screen) {
+  main {
+    width: 70vw;
+    margin: auto;
+  }
+
   p {
     font-size: 1.8rem;
   }

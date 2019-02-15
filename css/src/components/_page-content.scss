@@ -3,6 +3,7 @@
 #page-main {
   border: 3px solid blue;
   margin-top: $page-content-margin-top-md;
+  padding: $page-content-padding-md;
 }
 
 
@@ -16,11 +17,10 @@
 @media (min-width: $md-screen) {
 } // end of md-screen - 992px
 
-@media only screend and (min-width: $lg-screen),
-       only screen and (-webkit-min-device-pixel-ratio:1.5),
-       only screen and (min-resolution:144dpi) {
+@media only screen and (min-width: $lg-screen) {
   #page-main {
     margin-top: $page-content-margin-top-lg;
+    padding: $page-content-padding-lg;
   }
 } // end of lg-screen - 1200px
 
